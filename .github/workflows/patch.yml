@@ -11,6 +11,7 @@ jobs:
         run: |
           mkdir -p output
           docker run --rm \
+            -e PN=4 \
             -v ${{ github.workspace }}/TTF:/in \
             -v ${{ github.workspace }}/output:/out \
             nerdfonts/patcher --complete --mono --progressbars
