@@ -12,9 +12,9 @@ jobs:
           mkdir -p output
           docker run --rm \
             -e PN=4 \
-            -v ${{ github.workspace }}/TTF:/in \
+            -v ${{ github.workspace }}/TTF-Unhinted:/in \
             -v ${{ github.workspace }}/output:/out \
-            nerdfonts/patcher --complete --mono --progressbars
+            nerdfonts/patcher --complete --mono
       
       - uses: actions/upload-artifact@v4
         with:
